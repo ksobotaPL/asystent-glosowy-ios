@@ -1,0 +1,17 @@
+name: Asystent
+options: {bundleIdPrefix: pl.subiektywni, deploymentTarget: {iOS: "17.0"}}
+targets:
+  Asystent:
+    type: application
+    platform: iOS
+    sources: [Asystent]
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: pl.subiektywni.asystent
+        GENERATE_INFOPLIST_FILE: YES
+        INFOPLIST_KEY_UIBackgroundModes: audio
+        INFOPLIST_KEY_NSMicrophoneUsageDescription: Dyktowanie poleceń asystentowi.
+        INFOPLIST_KEY_NSSpeechRecognitionUsageDescription: Rozpoznawanie dyktowanych poleceń.
+        INFOPLIST_KEY_NSAppTransportSecurity_NSAllowsArbitraryLoads: YES
+        INFOPLIST_KEY_UILaunchScreen_Generation: YES
+        CODE_SIGNING_ALLOWED: NO
